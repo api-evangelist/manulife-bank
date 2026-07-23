@@ -1,0 +1,90 @@
+aid: manulife-bank
+name: Manulife Bank
+review:
+  question: Does Manulife Bank of Canada expose a first-party public developer portal or downloadable API specifications?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Manulife Bank of Canada publishes no first-party public developer portal
+    and no downloadable API specifications (OpenAPI/Swagger). It is a Schedule I
+    federally chartered bank and a wholly-owned subsidiary of The Manufacturers
+    Life Insurance Company (Manulife Financial Corporation), operating as
+    Canada's first branchless (direct) bank since 1993. Candidate developer
+    hosts do not resolve, and the public marketing/banking site is bot-protected
+    (HTTP 403 to automated clients), but no evidence — in the site, in the
+    Open Banking Tracker directory, or in web research — indicates any public
+    API program, sandbox, OAuth developer flow, or FDX/1033-style data-access
+    endpoint operated by the bank.
+  charter: Schedule I federally chartered bank (Canada); wholly-owned subsidiary of The Manufacturers Life Insurance Company / Manulife Financial Corporation
+  swift: MCBTCA2W
+  firstPartyDeveloperPortal: false
+  downloadableSpecs: false
+  authModel: none-documented
+  specProvenance: none
+  openBankingPosture: |
+    Canada's Consumer-Driven Banking (open-banking) framework, legislated in
+    Budget 2024 and the Fall Economic Statement 2024 with the Financial Consumer
+    Agency of Canada (FCAC) as overseer, is legislated but NOT yet operational.
+    The Bank of Canada has not committed to a launch date. Manulife Bank
+    documents no public position or first-party consumer-driven-banking API.
+  fdxParticipant: false
+  regulation1033Posture: not-applicable (Canadian institution; U.S. CFPB 1033 does not apply)
+  dataAccess: |
+    No first-party data-access API. Consumer financial data access to Manulife
+    Bank today is aggregator-based (Plaid, Flinks, MX) using consumer-permissioned
+    / screen-scraping connections, consistent with the pre-mandate Canadian market.
+  interacRtr: |
+    Interac e-Transfer is offered to customers as a consumer money-movement
+    feature but is not exposed as a documented public API. No documented Payments
+    Canada Real-Time Rail (RTR) API participation is published by the bank.
+  hostProbes:
+    - url: https://developer.manulifebank.ca
+      httpStatus: 000
+      note: Does not resolve (no host).
+    - url: https://api.manulifebank.ca
+      httpStatus: 000
+      note: Does not resolve (no host).
+    - url: https://apis.manulifebank.ca
+      httpStatus: 000
+      note: Does not resolve (no host).
+    - url: https://developer.manulife.ca
+      httpStatus: 000
+      note: Does not resolve (no host).
+    - url: https://developer.manulife.com
+      httpStatus: 000
+      note: Does not resolve (no host).
+    - url: https://developer.manulifebank.com
+      httpStatus: 000
+      note: Does not resolve (no host).
+    - url: https://www.manulifebank.ca/
+      httpStatus: 403
+      note: Live domain, bot-protected (Akamai); returns 403 to automated clients. No developer/API area.
+  transports:
+    - protocol: REST
+      documented: false
+      note: No public REST API documented.
+    - protocol: FDX
+      documented: false
+      note: No FDX data-access API documented; Canada has no operational open-banking mandate.
+sources:
+  - url: https://www.linkedin.com/company/manulife-bank
+    type: LinkedIn
+    note: Official Manulife Bank company page (industry Banking; Kitchener, Ontario). HTTP 200.
+  - url: https://en.wikipedia.org/wiki/Manulife_Bank_of_Canada
+    type: Reference
+    note: Confirms Schedule I charter, 1993 launch, branchless model, Manulife Financial ownership.
+  - url: https://www.openbankingtracker.com/swift-codes/ca/manulife-bank-of-canada
+    type: Reference
+    note: Directory entry (SWIFT MCBTCA2W); no published API specifications.
+  - url: https://www.canada.ca/en/financial-consumer-agency/services/banking/open-banking.html
+    type: Reference
+    note: FCAC open-banking (consumer-driven banking) framework — legislated, not yet operational.
+actions:
+  apisYmlApis: 0
+  reason: |
+    Identity-only (built-stub) record. No first-party public API, developer
+    portal, or downloadable specification exists to catalog. Consumer data
+    access is aggregator-only pending Canada's not-yet-live Consumer-Driven
+    Banking framework.
