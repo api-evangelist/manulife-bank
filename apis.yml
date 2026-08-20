@@ -22,6 +22,14 @@ description: >-
   offered as a consumer feature but is not exposed as a documented public API.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
+- Financial-Services
+- Banking
+- Canada
+- Schedule I Bank
+- Direct Bank
+- Digital Banking
+- Data Aggregation
+tags_raw:
 - Financial Services
 - Banking
 - Canada
