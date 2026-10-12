@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/manulife-bank/integrations
+- https://n8n.io/integrations/manulife-bank/
+- https://composio.dev/toolkits/manulife-bank
+- https://monid.ai/tools/manulife-bank
+checked:
+- https://composio.dev/toolkits/manulife-bank
+- https://monid.ai/tools/manulife-bank
+- https://n8n.io/integrations/manulife-bank/
+- https://zapier.com/apps/manulife-bank/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
